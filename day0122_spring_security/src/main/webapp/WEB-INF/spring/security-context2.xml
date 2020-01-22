@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+	xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                                 http://www.springframework.org/schema/beans/spring-beans.xsd
+                                 http://www.springframework.org/schema/security
+                                 http://www.springframework.org/schema/security/spring-security.xsd">
+	<!-- security 기능: 인증과 권한을 좀 더 간편하고 쉽게 하기 위한 프레임워크(라이브러리) -->
+
+	<!-- 2. security!! 설정 두번째. 기본 화면 외에 따로 로그인화면 만들어 나오게 한다. -->
+
+	<!-- 검사 URL -->
+	<http auto-config="true" use-expressions="true">
+		<!-- *** interceptor 설정은 위에서부터 마치 switch문 처럼 타기 때문에! -->
+		<!-- 반드시 exception 타듯이 작은 범위부터 큰범위로 pattern을 잡아줄것!!! -->
+		<!-- 안그러면 페이지 안뜨고 난리난다!! -->
+		<intercept-url pattern="/login/loginForm"
+			access="permitAll" />
+		<intercept-url pattern="/" access="permitAll" />
+		<intercept-url pattern="/admin/**"
+			access="hasRole('ADMIN')" /> <!-- 관리자가 아닌데, /admin/**에 접근할 때 막는다 -->
+		<intercept-url pattern="/**"
+			access="hasAnyRole('USER, ADMIN')" />
+
+		<!-- <form-login>: 개발자가 따로 제작한 로그인 페이지를 적용시키는 태그! -->
+		<!-- 로그인 인증을 처리할 주소는 /login/loginForm이다. -->
+		<!-- default-target-url="/" : 로그인이 완료되면 "/"로 이동. -->
+		<!-- authentication-failure-url : 인증 실패시 가야 하는 주소. -->
+		<!-- username-parameter : 로그인 폼의 아이디 입력 필드에 사용 될 name. 기본값은 "username" -->
+		<!-- password-parameter : 로그인 폼의 패스워드 입력 필드에 사용 될 name. 기본값은 "" -->
+		<form-login login-page="/login/loginForm"
+			default-target-url="/"
+			authentication-failure-url="/login/loginForm?error"
+			username-parameter="id" password-parameter="password" />
+
+		<!-- logout 설정: 어디로 보낼 것인가! -->
+		<logout logout-url="/logout" logout-success-url="/" />
+
+		<!-- 내부적으로 access가 거부되었을 때 향할 페이지 설정! -->
+		<!-- => intercept-url에서 설정한 url에 접근할 권한인 access값과 다를 때 뜨는 것! -->
+		<!-- 여기선, 유저 권한(authorities="ROLE_USER")이 관리자홈에 접근할 때 뜬다! -->
+		<access-denied-handler
+			error-page="/login/accessDenied" />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="user" password="user" authorities="ROLE_USER" />
+				<user name="admin" password="admin" authorities="ROLE_ADMIN" />
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>
