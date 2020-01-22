@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="pencil" class="day0110.Spring.chap5.Pencil6B">
+	</bean> <!-- 객체를 매번 새로 만드는 것이 아니라 클래스만 바꾸어주면 적용된다! -->
+	<!-- 소스코드의 수정 없이 설정파일인 .xml의 클래스만 바꿈으로써 동작하게 되므로 -->
+	<!-- 유지보수가 쉽다. 지향해야함 -->
+
+</beans>
