@@ -38,13 +38,13 @@
   	]]>
 	</select>
 	 
-	 <select id="selectAllEmpList" resultType="EmpVO" >
+	 <select id="selectAllEmpList" resultType="edu.bit.board.vo.EmpVO" >
 	<![CDATA[
 		select * from emp	
   	]]>
 	</select>
 	
-	<select id="selectAllEmpListHashMap" resultType="hashmap" >
+	<select id="selectAllEmpListHashMap" resultType="java.util.HashMap" >
 	<![CDATA[
 		select * from emp	
   	]]>

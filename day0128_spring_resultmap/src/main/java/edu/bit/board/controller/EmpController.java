@@ -43,11 +43,14 @@ public class EmpController {
 		 */
 		
 		DeptEmpVO deptEmpVO =  empServie.selectEmpDeptName(10);
+		 
+		model.addAttribute("deptEmpVO", deptEmpVO);
+		model.addAttribute("empList", deptEmpVO.getEmpList());
 		
 		System.out.println(deptEmpVO.getDeptno());
 		System.out.println(deptEmpVO.getEmpList().size()); 
 		
-		return "redirect:/";
+		return "/list";
 	}
 	
 	//로그?��?��

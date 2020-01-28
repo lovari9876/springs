@@ -61,4 +61,18 @@ public class EmpVO {
 		this.deptno = deptno;
 	}
 	
+	public EmpVO(int empno, String ename, String job, int mgr, Timestamp hiredate, int sal, int comm, int deptno) {
+		super();
+		this.empno = empno;
+		this.ename = ename;
+		this.job = job;
+		this.mgr = mgr;
+		this.hiredate = hiredate;
+		this.sal = sal;
+		this.comm = comm;
+		this.deptno = deptno;
+	}
+
+	public EmpVO() {}
+	
 }
