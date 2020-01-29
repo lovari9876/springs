@@ -19,14 +19,14 @@ import edu.bit.board.vo.DeptEmpVO;
 public class EmpController {
 	
 	@Autowired
-	private EmpService empServie;
+	private EmpService empService;
 	
 	@RequestMapping("/list")
 	public String emp(Model model) {
 		
 		System.out.println("emp");
 		
-		//ArrayList<EmpVO> empList = empServie.selectAllEmpList();
+		//ArrayList<EmpVO> empList = empService.selectAllEmpList();
 		
 		/*
 		 * ArrayList<HashMap<String,Object>> empList =
@@ -42,7 +42,7 @@ public class EmpController {
 		 * System.out.println(empList.size());
 		 */
 		
-		DeptEmpVO deptEmpVO =  empServie.selectEmpDeptName(10);
+		DeptEmpVO deptEmpVO = empService.selectEmpDeptName(10);
 		 
 		model.addAttribute("deptEmpVO", deptEmpVO);
 		model.addAttribute("empList", deptEmpVO.getEmpList());

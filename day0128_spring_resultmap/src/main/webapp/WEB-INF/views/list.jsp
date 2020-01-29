@@ -11,24 +11,25 @@
 
 	<table width="500" cellpadding="0" cellspacing="0" border="1">
 		<tr>
-			<td>번호</td>
-			<td>이름</td>
+			<td>부서번호</td>
+			<td>부서명</td>
 			<td>장소</td>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-			<td>5</td>
-			<td>6</td>
-			<td>7</td>
-			<td>8</td>
+			<td>사원번호</td>
+			<td>사원이름</td>
+			<td>직업</td>
+			<td>매니저</td>
+			<td>고용일</td>
+			<td>급여</td>
+			<td>커미션</td>
+			<td>부서번호</td>
 		</tr>
 
-		<tr>
-			<td>${deptEmpVO.deptno}</td>
-			<td>${deptEmpVO.dname}</td>
-			<td>${deptEmpVO.loc}</td>
-			<c:forEach items="${empList}" var="empvo">
+
+		<c:forEach items="${empList}" var="empvo">
+			<tr>
+				<td>${deptEmpVO.deptno}</td>
+				<td>${deptEmpVO.dname}</td>
+				<td>${deptEmpVO.loc}</td>
 				<td>${empvo.empno}</td>
 				<td>${empvo.ename}</td>
 				<td>${empvo.job}</td>
@@ -37,12 +38,12 @@
 				<td>${empvo.sal}</td>
 				<td>${empvo.comm}</td>
 				<td>${empvo.deptno}</td>
-				
-			</c:forEach>
-		
+			</tr>
+		</c:forEach>
+
 
 		<tr>
-			<td colspan="5"><a href="write_view">글작성</a></td>
+			<td colspan="11"><a href="write_view">글작성</a></td>
 		</tr>
 	</table>
 </body>
