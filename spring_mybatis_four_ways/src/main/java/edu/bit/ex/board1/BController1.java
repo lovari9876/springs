@@ -5,10 +5,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-// < πÊπ˝ 1 >
-// 1. interface IBDao∏¶ xml namespaceø° ∏≈«Œ 
+// < Î∞©Î≤ï 1 >
+// 1. interface IBDaoÎ•º xml namespaceÏóê Îß§Ìïë 
 // => <mapper namespace="edu.bit.ex.board1.IBDao">
-// 2. sqlSession.getMapper(IBDao.class)∏¶ ¿ÃøÎ
+// 2. sqlSession.getMapper(IBDao.class)Î•º Ïù¥Ïö©
 
 @Controller
 public class BController1 {

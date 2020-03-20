@@ -7,16 +7,16 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Service;
 
-// @¾î³ëÅ×ÀÌ¼ÇÀ¸·Î °´Ã¼ »ı¼ºÇÏ´Â °Í
+// @ì–´ë…¸í…Œì´ì…˜ìœ¼ë¡œ ê°ì²´ ìƒì„±í•˜ëŠ” ê²ƒ
 @Service
 public class BService2 {
-	// ÀÇÁ¸¼º ÁÖÀÔÇØÁÖ´Â °Í.
-	@Inject // root-context.xml¿¡¼­ Å¸ÀÔ Ã£¾Æ¼­ °¡Á®¿Â´Ù. °´Ã¼ »ı¼ºÀÌ ¾Æ´Ô
+	// ì˜ì¡´ì„± ì£¼ì…í•´ì£¼ëŠ” ê²ƒ.
+	@Inject // root-context.xmlì—ì„œ íƒ€ì… ì°¾ì•„ì„œ ê°€ì ¸ì˜¨ë‹¤. ê°ì²´ ìƒì„±ì´ ì•„ë‹˜
 	SqlSession sqlSession;
 
 	public List<BoardVO> selectBoardList() throws Exception {
 
-		// getMapper ´ë½Å ¾²´Â 2¹øÂ° ¹æ¹ı
+		// getMapper ëŒ€ì‹  ì“°ëŠ” 2ë²ˆì§¸ ë°©ë²•
 		return sqlSession.selectList("board.selectBoardList");
 	}
 }

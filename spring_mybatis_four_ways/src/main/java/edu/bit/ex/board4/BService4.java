@@ -6,11 +6,11 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
 
-// @¾î³ëÅ×ÀÌ¼ÇÀ¸·Î °´Ã¼ »ı¼ºÇÏ´Â °Í
+// @ì–´ë…¸í…Œì´ì…˜ìœ¼ë¡œ ê°ì²´ ìƒì„±í•˜ëŠ” ê²ƒ
 @Service
 public class BService4 {
 
-	// ÀÇÁ¸¼º ÁÖÀÔÇØÁÖ´Â °Í.
+	// ì˜ì¡´ì„± ì£¼ì…í•´ì£¼ëŠ” ê²ƒ.
 	@Inject
 	BoardMapper4 boardMapper;
 

@@ -5,13 +5,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-// < ¹æ¹ı 4 >
-// 1. ¹æ¹ı1°ú °°Àº ¹æ½ÄÀÓ. ´ë½Å sqlSession.getMapper ÇÔ¼ö¸¦ »ç¿ëÇÏÁö ¾ÊÀ½
-// 2. °£´ÜÇÏ°í ½ÉÇÃÇÔ
-// 3. root~.xml¿¡ ¾Æ·¡ µÎ ÁÙÀ» Ãß°¡
+// < ë°©ë²• 4 >
+// 1. ë°©ë²•1ê³¼ ê°™ì€ ë°©ì‹ì„. ëŒ€ì‹  sqlSession.getMapper í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì§€ ì•ŠìŒ
+// 2. ê°„ë‹¨í•˜ê³  ì‹¬í”Œí•¨
+// 3. root~.xmlì— ì•„ë˜ ë‘ ì¤„ì„ ì¶”ê°€
 // <!-- Mapper Interface --> 
 // <mybatis-spring:scan base-package="edu.bit.ex"/> 
-// 4. ¹æ¹ı3°ú ¹æ¹ı4¸¦ È¥¿ëÇÏ¿© ¾µ ¼ö ÀÖ´Ù. °£´ÜÇÑ Äõ¸®´Â @()¿¡ ¶§·Á³ÖÀ¸¸é µÇ´Ï±î!
+// 4. ë°©ë²•3ê³¼ ë°©ë²•4ë¥¼ í˜¼ìš©í•˜ì—¬ ì“¸ ìˆ˜ ìˆë‹¤. ê°„ë‹¨í•œ ì¿¼ë¦¬ëŠ” @()ì— ë•Œë ¤ë„£ìœ¼ë©´ ë˜ë‹ˆê¹Œ!
 
 @Controller
 public class BController4 {

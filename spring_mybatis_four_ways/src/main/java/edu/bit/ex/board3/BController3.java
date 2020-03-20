@@ -5,14 +5,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-// < ¹æ¹ý 3 >
-// 1. ÀÎÅÍÆäÀÌ½º À§¿¡ @ À» ºÙÀÌ´Â Çü½Ä
-// 2. xmlÀÌ ÇÊ¿ä ¾øÀ½, sqlSession °´Ã¼ ÇÊ¿ä ¾øÀ½.
-// 3. root~.xml¿¡ ¾Æ·¡ µÎ ÁÙÀ» Ãß°¡
-// (¾î³ëÅ×ÀÌ¼Ç ½ºÄµÇÏ¿© °´Ã¼ »ý¼ºÇØÁÖ´Â °Í)
+// < ë°©ë²• 3 >
+// 1. ì¸í„°íŽ˜ì´ìŠ¤ ìœ„ì— @ ì„ ë¶™ì´ëŠ” í˜•ì‹
+// 2. xmlì´ í•„ìš” ì—†ìŒ, sqlSession ê°ì²´ í•„ìš” ì—†ìŒ.
+// 3. root~.xmlì— ì•„ëž˜ ë‘ ì¤„ì„ ì¶”ê°€
+// (ì–´ë…¸í…Œì´ì…˜ ìŠ¤ìº”í•˜ì—¬ ê°ì²´ ìƒì„±í•´ì£¼ëŠ” ê²ƒ)
 // <!-- Mapper Interface --> 
 // <mybatis-spring:scan base-package="edu.bit.ex"/> 
-// 3. Äõ¸®°¡ ±æ¾îÁö¸é »ç¿ëÇÏ±â Èûµê(@ ÀÇ °ýÈ£ ¾È¿¡ ´Ù Àû±â Èûµé´Ù..)
+// 3. ì¿¼ë¦¬ê°€ ê¸¸ì–´ì§€ë©´ ì‚¬ìš©í•˜ê¸° íž˜ë“¦(@ ì˜ ê´„í˜¸ ì•ˆì— ë‹¤ ì ê¸° íž˜ë“¤ë‹¤..)
 
 @Controller
 public class BController3 {

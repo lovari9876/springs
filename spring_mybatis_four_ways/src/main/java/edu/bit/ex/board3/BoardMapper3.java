@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Select;
 
-// ÀÌÁ¦ interface¿¡ dao°¡ ¾Æ´Ï¶ó mapper¶ó´Â ÀÌ¸§À» ºÙ¿©ÁØ´Ù
+// ì´ì œ interfaceì— daoê°€ ì•„ë‹ˆë¼ mapperë¼ëŠ” ì´ë¦„ì„ ë¶™ì—¬ì¤€ë‹¤
 public interface BoardMapper3 {
 
 	@Select("select bId, bName, bTitle,bContent, bDate, bHit, bGroup, bStep, bIndent from mvc_board order by bGroup desc, bStep asc")

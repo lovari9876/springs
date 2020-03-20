@@ -5,10 +5,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-// < ¹æ¹ı 2 >
-// 1. dao interface´Â ÇÊ¿ä°¡ ¾øÀ½
-// 2. sqlSession¿¡¼­ Á¦°øÇÏ´Â ÇÔ¼ö(selectList, selectOne..)À» ÀÌ¿ëÇÔ
-// 3. Äõ¸® ±¸ÇöÀ» À§ÇÑ xmlÀÌ ÇÊ¿ä. ÇØ´ç xmlÀÇ namespace´Â °³¹ßÀÚ°¡ Á¤ÇÔ
+// < ë°©ë²• 2 >
+// 1. dao interfaceëŠ” í•„ìš”ê°€ ì—†ìŒ
+// 2. sqlSessionì—ì„œ ì œê³µí•˜ëŠ” í•¨ìˆ˜(selectList, selectOne..)ì„ ì´ìš©í•¨
+// 3. ì¿¼ë¦¬ êµ¬í˜„ì„ ìœ„í•œ xmlì´ í•„ìš”. í•´ë‹¹ xmlì˜ namespaceëŠ” ê°œë°œìê°€ ì •í•¨
 
 @Controller
 public class BController2 {

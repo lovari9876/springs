@@ -4,13 +4,13 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Select;
 
-// ÀÌÁ¦ interface¿¡ dao°¡ ¾Æ´Ï¶ó mapper¶ó´Â ÀÌ¸§À» ºÙ¿©ÁØ´Ù
+// ì´ì œ interfaceì— daoê°€ ì•„ë‹ˆë¼ mapperë¼ëŠ” ì´ë¦„ì„ ë¶™ì—¬ì¤€ë‹¤
 public interface BoardMapper4 {
 
 	public List<BoardVO> selectBoardList();
 
-	// ÀÌ·± ½ÄÀ¸·Î ¹æ¹ı3À» ¹æ¹ı4 ¾²¸é¼­ È¥¿ë °¡´É!
-	// °£´ÜÇÑ Äõ¸®´Â ¹æ¹ı3À¸·Î, º¹ÀâÇÑ Äõ¸®´Â xml ÅëÇØ ¹æ¹ı4·Î!
+	// ì´ëŸ° ì‹ìœ¼ë¡œ ë°©ë²•3ì„ ë°©ë²•4 ì“°ë©´ì„œ í˜¼ìš© ê°€ëŠ¥!
+	// ê°„ë‹¨í•œ ì¿¼ë¦¬ëŠ” ë°©ë²•3ìœ¼ë¡œ, ë³µì¡í•œ ì¿¼ë¦¬ëŠ” xml í†µí•´ ë°©ë²•4ë¡œ!
 	@Select("select * from mvc_board order by bGroup desc, bStep asc")
 	public List<BoardVO> selectBoardList1();
 
