@@ -1,0 +1,1 @@
+board_mybatis_mapper 바탕으로 error page 처리
