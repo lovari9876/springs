@@ -1,0 +1,2 @@
+cardinality 1:n관계에서 mybatis와 resultmap 이용 
+=> (resultmap은 java.util.HashMap으로 결과치 묶어서 n 표현)

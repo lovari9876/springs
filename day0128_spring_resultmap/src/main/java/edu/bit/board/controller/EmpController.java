@@ -21,6 +21,7 @@ public class EmpController {
 	@Autowired
 	private EmpService empService;
 	
+	// http://localhost:8282/board/emp/list
 	@RequestMapping("/list")
 	public String emp(Model model) {
 		

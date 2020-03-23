@@ -37,7 +37,7 @@ public class BoardController {
 	public String write(BoardVO boardVO) {
 		System.out.println("write()");
 
-		// ��ü�� �ٷ� �ѱ��
+		// 객체로 바로 넘기기
 		boardService.insertBoard(boardVO);
 
 //		boardService.insertBoard(boardVO.getbName(), boardVO.getbTitle(), boardVO.getbContent());
@@ -60,7 +60,7 @@ public class BoardController {
 //	public String write(BoardVO boardVO, Model model) {
 //		System.out.println("write()");
 //
-//		// ��ü�� �ٷ� �ѱ��
+//		// 객체로 바로 넘기기
 //		boardService.insertBoard(boardVO);
 //
 ////		boardService.insertBoard(boardVO.getbName(), boardVO.getbTitle(), boardVO.getbContent());

@@ -10,22 +10,22 @@ public interface BoardService {
 
 	public List<BoardVO> selectBoardList();
 
-	// ÀÔ·Â¹ŞÀº 3°³¸¸ ÀúÀåÇÒ °ÍÀÌ´Ù.
-	// @Param ²À ³Ö¾îÁÖ±â
-	// board.xmlÀÇ #À¸·Î Ã³¸®ÇÑ ÆÄ¶ó¹ÌÅÍ °ªÀ» ³Ö¾îÁÖ°Ú´Ù´Â °Í
-	// #{bName}, #{bTitle}, #{bContent} ¿¡ ³Ö¾îÁØ´Ù´Â °ÍÀÌ´Ù.
+	// ì…ë ¥ë°›ì€ 3ê°œë§Œ ì €ì¥í•  ê²ƒì´ë‹¤.
+	// @Param ê¼­ ë„£ì–´ì£¼ê¸°
+	// board.xmlì˜ #ìœ¼ë¡œ ì²˜ë¦¬í•œ íŒŒë¼ë¯¸í„° ê°’ì„ ë„£ì–´ì£¼ê² ë‹¤ëŠ” ê²ƒ
+	// #{bName}, #{bTitle}, #{bContent} ì— ë„£ì–´ì¤€ë‹¤ëŠ” ê²ƒì´ë‹¤.
 //	public void insertBoard(@Param("bName") String bName, @Param("bTitle") String bTitle,
 //			@Param("bContent") String bContent);
-	// @Param()ÀÌ .jsp·ÎºÎÅÍ ÆÄ¶ó¹ÌÅÍ °ª °¡Á®¿Í¼­ ³Ö¾îÁÖ´Â °Í!
+	// @Param()ì´ .jspë¡œë¶€í„° íŒŒë¼ë¯¸í„° ê°’ ê°€ì ¸ì™€ì„œ ë„£ì–´ì£¼ëŠ” ê²ƒ!
 
-	// °¡Á®¿Ã ÆÄ¶ó¹ÌÅÍ°¡ ¸¹À» ¶§ ÀÌ·¸°Ô °´Ã¼·Î °¡Á®¿Â´Ù.
+	// ê°€ì ¸ì˜¬ íŒŒë¼ë¯¸í„°ê°€ ë§ì„ ë•Œ ì´ë ‡ê²Œ ê°ì²´ë¡œ ê°€ì ¸ì˜¨ë‹¤.
 	public void insertBoard(@Param("boardVO") BoardVO boardVO);
 
 //	<input type="hidden" name="bId" value="${content_view.bId}">
-//	ÀÌ·¸°Ô ¼³Á¤ÇÑ ÆÄ¶ó¹ÌÅÍ °¡Á®¿À´Â °Í
+//	ì´ë ‡ê²Œ ì„¤ì •í•œ íŒŒë¼ë¯¸í„° ê°€ì ¸ì˜¤ëŠ” ê²ƒ
 	public BoardVO selectBoardOne(@Param("bId") String bId);
 
-	// Äõ¸®¹®ÀÌ Âª°í ÇÑ°¡Áö °ª¸¸ °¡Á®¿Ã¶§´Â @Param ÇÊ¿ä¾øÀÌ ±×³É ÇÏ³ª¾¿ °¡Á®¿À¸é µÈ´Ù.
+	// ì¿¼ë¦¬ë¬¸ì´ ì§§ê³  í•œê°€ì§€ ê°’ë§Œ ê°€ì ¸ì˜¬ë•ŒëŠ” @Param í•„ìš”ì—†ì´ ê·¸ëƒ¥ í•˜ë‚˜ì”© ê°€ì ¸ì˜¤ë©´ ëœë‹¤.
 //	// @Select("select * from mvc_board where bId = #{bId}")
 //	public BoardVO selectBoardOne(int bId);
 }
